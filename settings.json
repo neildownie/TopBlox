@@ -1,0 +1,27 @@
+{
+    "window.zoomLevel": 0,
+    "sync.gist": "neildownie",
+    "sync.lastUpload": "",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    //"editor.fontFamily": "Operator Mono Thin",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 12,
+    "editor.tabSize": 4,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "An old Hope with italics",
+    "terminal.external.osxExec": "iTerm.app",
+     "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "extensions.ignoreRecommendations": true,
+    "editor.minimap.enabled": false
+
+}
