@@ -25,24 +25,24 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x6060604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506101a1806100536000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b84c139214610046575b600080fd5b341561005157600080fd5b6100676004808035906020019091905050610132565b60405180806020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281038252848181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156101225780601f106100f757610100808354040283529160200191610122565b820191906000526020600020905b81548152906001019060200180831161010557829003601f168201915b5050935050505060405180910390f35b600160205280600052604060002060009150905080600001908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050825600a165627a7a72305820564774bff1f5206d8d58b85152bbf0c6290edea5568958842a38da811700a9010029",
-  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b84c139214610046575b600080fd5b341561005157600080fd5b6100676004808035906020019091905050610132565b60405180806020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281038252848181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156101225780601f106100f757610100808354040283529160200191610122565b820191906000526020600020905b81548152906001019060200180831161010557829003601f168201915b5050935050505060405180910390f35b600160205280600052604060002060009150905080600001908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050825600a165627a7a72305820564774bff1f5206d8d58b85152bbf0c6290edea5568958842a38da811700a9010029",
+  "bytecode": "0x6060604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506101a1806100536000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b84c139214610046575b600080fd5b341561005157600080fd5b6100676004808035906020019091905050610132565b60405180806020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281038252848181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156101225780601f106100f757610100808354040283529160200191610122565b820191906000526020600020905b81548152906001019060200180831161010557829003601f168201915b5050935050505060405180910390f35b600160205280600052604060002060009150905080600001908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050825600a165627a7a7230582080e769f04648a8c9dd19b784362bc4711cf582d93ca05278d364ea80a6049b540029",
+  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b84c139214610046575b600080fd5b341561005157600080fd5b6100676004808035906020019091905050610132565b60405180806020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281038252848181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156101225780601f106100f757610100808354040283529160200191610122565b820191906000526020600020905b81548152906001019060200180831161010557829003601f168201915b5050935050505060405180910390f35b600160205280600052604060002060009150905080600001908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050825600a165627a7a7230582080e769f04648a8c9dd19b784362bc4711cf582d93ca05278d364ea80a6049b540029",
   "sourceMap": "48:1455:3:-;;;223:10:2;215:5;;:18;;;;;;;;;;;;;;;;;;48:1455:3;;;;;;",
   "deployedSourceMap": "48:1455:3:-;;;;;;;;;;;;;;;;;;;;;;;;204:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
   "source": "pragma solidity ^0.4.2;\n\nimport \"./Owned.sol\";\n\ncontract TopBlox is Owned {\n\nstruct User {\n    address user;\n    address wallet;\n}\n\nstruct Packs {\n    string name;\n    address pack;\n}\n\n// State variables\nmapping(uint => Packs) public packs;\nuint packCounter;\n\nstruct Cards {\n    string name;\n    string details;\n    uint   pack;\n}\n\nstruct Draws {\n    uint id;\n    uint user1;\n    uint256 user1Stake;\n    uint user2;\n    uint256 user2Stake;\n    uint    packId;\n    uint    winningUserId;\n    mapping(uint => Cards) cards;\n}\n\n// function addPack(){\n\n// }\n\n//function addUser() {}\n//function editWallet() {}\n//function enterDraw() {}\n\n//Get the number of packs in the contract\n// function getNumberOfPacks() public constant returns (uint) {\n//     return packCounter;\n// }\n\n// //Get and return all pack ids\n// function getPacks() public constant returns (uint[]) {\n// //check whether there's at least one card\n//     if (packCounter == 0) {\n//     return new uint[](0);\n//     }\n//     //prepare intermediate array\n//     uint[] memory packIds = new uint[](packCounter);\n\n//     uint numberOfPacks = 0;\n//     //iterate through packs\n//     for (uint i = 1; i <= packCounter; i++){\n//         packIds[numberOfPacks] = Packs[i].pack;\n//         numberOfPacks++;\n//     }\n// }\n// function getCards() public constant returns (uint, string){\n//     if (packCounter != 0) {\n//     //return new uint[], new string[];\n//     }\n// }\n//function getUserCardsByPack() {}\n//function listUsersMatchingCards() {}\n\n\n\n\n\n\n}\n",
-  "sourcePath": "/Users/neilalexanderdownie/Dropbox/webdev/TopBlox/contracts/TopBlox.sol",
+  "sourcePath": "/Volumes/STORAGE/Dropbox/webdev/TopBlox/contracts/TopBlox.sol",
   "ast": {
-    "absolutePath": "/Users/neilalexanderdownie/Dropbox/webdev/TopBlox/contracts/TopBlox.sol",
+    "absolutePath": "/Volumes/STORAGE/Dropbox/webdev/TopBlox/contracts/TopBlox.sol",
     "exportedSymbols": {
       "TopBlox": [
-        277
+        322
       ]
     },
-    "id": 278,
+    "id": 323,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 231,
+        "id": 276,
         "literals": [
           "solidity",
           "^",
@@ -53,12 +53,12 @@
         "src": "0:23:3"
       },
       {
-        "absolutePath": "/Users/neilalexanderdownie/Dropbox/webdev/TopBlox/contracts/Owned.sol",
+        "absolutePath": "/Volumes/STORAGE/Dropbox/webdev/TopBlox/contracts/Owned.sol",
         "file": "./Owned.sol",
-        "id": 232,
+        "id": 277,
         "nodeType": "ImportDirective",
-        "scope": 278,
-        "sourceUnit": 230,
+        "scope": 323,
+        "sourceUnit": 275,
         "src": "25:21:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -69,45 +69,45 @@
             "arguments": [],
             "baseName": {
               "contractScope": null,
-              "id": 233,
+              "id": 278,
               "name": "Owned",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 229,
+              "referencedDeclaration": 274,
               "src": "68:5:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Owned_$229",
+                "typeIdentifier": "t_contract$_Owned_$274",
                 "typeString": "contract Owned"
               }
             },
-            "id": 234,
+            "id": 279,
             "nodeType": "InheritanceSpecifier",
             "src": "68:5:3"
           }
         ],
         "contractDependencies": [
-          229
+          274
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 277,
+        "id": 322,
         "linearizedBaseContracts": [
-          277,
-          229
+          322,
+          274
         ],
         "name": "TopBlox",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "TopBlox.User",
-            "id": 239,
+            "id": 284,
             "members": [
               {
                 "constant": false,
-                "id": 236,
+                "id": 281,
                 "name": "user",
                 "nodeType": "VariableDeclaration",
-                "scope": 239,
+                "scope": 284,
                 "src": "95:12:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -116,7 +116,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 235,
+                  "id": 280,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "95:7:3",
@@ -130,10 +130,10 @@
               },
               {
                 "constant": false,
-                "id": 238,
+                "id": 283,
                 "name": "wallet",
                 "nodeType": "VariableDeclaration",
-                "scope": 239,
+                "scope": 284,
                 "src": "113:14:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -142,7 +142,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 237,
+                  "id": 282,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "113:7:3",
@@ -157,20 +157,20 @@
             ],
             "name": "User",
             "nodeType": "StructDefinition",
-            "scope": 277,
+            "scope": 322,
             "src": "77:53:3",
             "visibility": "public"
           },
           {
             "canonicalName": "TopBlox.Packs",
-            "id": 244,
+            "id": 289,
             "members": [
               {
                 "constant": false,
-                "id": 241,
+                "id": 286,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 244,
+                "scope": 289,
                 "src": "151:11:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -179,7 +179,7 @@
                   "typeString": "string storage pointer"
                 },
                 "typeName": {
-                  "id": 240,
+                  "id": 285,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "151:6:3",
@@ -193,10 +193,10 @@
               },
               {
                 "constant": false,
-                "id": 243,
+                "id": 288,
                 "name": "pack",
                 "nodeType": "VariableDeclaration",
-                "scope": 244,
+                "scope": 289,
                 "src": "168:12:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -205,7 +205,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 242,
+                  "id": 287,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "168:7:3",
@@ -220,27 +220,27 @@
             ],
             "name": "Packs",
             "nodeType": "StructDefinition",
-            "scope": 277,
+            "scope": 322,
             "src": "132:51:3",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 248,
+            "id": 293,
             "name": "packs",
             "nodeType": "VariableDeclaration",
-            "scope": 277,
+            "scope": 322,
             "src": "204:35:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Packs_$244_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Packs_$289_storage_$",
               "typeString": "mapping(uint256 => struct TopBlox.Packs storage ref)"
             },
             "typeName": {
-              "id": 247,
+              "id": 292,
               "keyType": {
-                "id": 245,
+                "id": 290,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "212:4:3",
@@ -252,18 +252,18 @@
               "nodeType": "Mapping",
               "src": "204:22:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Packs_$244_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Packs_$289_storage_$",
                 "typeString": "mapping(uint256 => struct TopBlox.Packs storage ref)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 246,
+                "id": 291,
                 "name": "Packs",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 244,
+                "referencedDeclaration": 289,
                 "src": "220:5:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Packs_$244_storage_ptr",
+                  "typeIdentifier": "t_struct$_Packs_$289_storage_ptr",
                   "typeString": "struct TopBlox.Packs storage pointer"
                 }
               }
@@ -273,10 +273,10 @@
           },
           {
             "constant": false,
-            "id": 250,
+            "id": 295,
             "name": "packCounter",
             "nodeType": "VariableDeclaration",
-            "scope": 277,
+            "scope": 322,
             "src": "241:16:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -285,7 +285,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 249,
+              "id": 294,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "241:4:3",
@@ -299,14 +299,14 @@
           },
           {
             "canonicalName": "TopBlox.Cards",
-            "id": 257,
+            "id": 302,
             "members": [
               {
                 "constant": false,
-                "id": 252,
+                "id": 297,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 257,
+                "scope": 302,
                 "src": "279:11:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -315,7 +315,7 @@
                   "typeString": "string storage pointer"
                 },
                 "typeName": {
-                  "id": 251,
+                  "id": 296,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "279:6:3",
@@ -329,10 +329,10 @@
               },
               {
                 "constant": false,
-                "id": 254,
+                "id": 299,
                 "name": "details",
                 "nodeType": "VariableDeclaration",
-                "scope": 257,
+                "scope": 302,
                 "src": "296:14:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -341,7 +341,7 @@
                   "typeString": "string storage pointer"
                 },
                 "typeName": {
-                  "id": 253,
+                  "id": 298,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "296:6:3",
@@ -355,10 +355,10 @@
               },
               {
                 "constant": false,
-                "id": 256,
+                "id": 301,
                 "name": "pack",
                 "nodeType": "VariableDeclaration",
-                "scope": 257,
+                "scope": 302,
                 "src": "316:11:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -367,7 +367,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 255,
+                  "id": 300,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "316:4:3",
@@ -382,20 +382,20 @@
             ],
             "name": "Cards",
             "nodeType": "StructDefinition",
-            "scope": 277,
+            "scope": 322,
             "src": "260:70:3",
             "visibility": "public"
           },
           {
             "canonicalName": "TopBlox.Draws",
-            "id": 276,
+            "id": 321,
             "members": [
               {
                 "constant": false,
-                "id": 259,
+                "id": 304,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "351:7:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -404,7 +404,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 258,
+                  "id": 303,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "351:4:3",
@@ -418,10 +418,10 @@
               },
               {
                 "constant": false,
-                "id": 261,
+                "id": 306,
                 "name": "user1",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "364:10:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -430,7 +430,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 260,
+                  "id": 305,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "364:4:3",
@@ -444,10 +444,10 @@
               },
               {
                 "constant": false,
-                "id": 263,
+                "id": 308,
                 "name": "user1Stake",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "380:18:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -456,7 +456,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 262,
+                  "id": 307,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "380:7:3",
@@ -470,10 +470,10 @@
               },
               {
                 "constant": false,
-                "id": 265,
+                "id": 310,
                 "name": "user2",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "404:10:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -482,7 +482,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 264,
+                  "id": 309,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "404:4:3",
@@ -496,10 +496,10 @@
               },
               {
                 "constant": false,
-                "id": 267,
+                "id": 312,
                 "name": "user2Stake",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "420:18:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -508,7 +508,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 266,
+                  "id": 311,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "420:7:3",
@@ -522,10 +522,10 @@
               },
               {
                 "constant": false,
-                "id": 269,
+                "id": 314,
                 "name": "packId",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "444:14:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -534,7 +534,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 268,
+                  "id": 313,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "444:4:3",
@@ -548,10 +548,10 @@
               },
               {
                 "constant": false,
-                "id": 271,
+                "id": 316,
                 "name": "winningUserId",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "464:21:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -560,7 +560,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 270,
+                  "id": 315,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "464:4:3",
@@ -574,21 +574,21 @@
               },
               {
                 "constant": false,
-                "id": 275,
+                "id": 320,
                 "name": "cards",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "491:28:3",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Cards_$257_storage_$",
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Cards_$302_storage_$",
                   "typeString": "mapping(uint256 => struct TopBlox.Cards storage ref)"
                 },
                 "typeName": {
-                  "id": 274,
+                  "id": 319,
                   "keyType": {
-                    "id": 272,
+                    "id": 317,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "499:4:3",
@@ -600,18 +600,18 @@
                   "nodeType": "Mapping",
                   "src": "491:22:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Cards_$257_storage_$",
+                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Cards_$302_storage_$",
                     "typeString": "mapping(uint256 => struct TopBlox.Cards storage ref)"
                   },
                   "valueType": {
                     "contractScope": null,
-                    "id": 273,
+                    "id": 318,
                     "name": "Cards",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 257,
+                    "referencedDeclaration": 302,
                     "src": "507:5:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Cards_$257_storage_ptr",
+                      "typeIdentifier": "t_struct$_Cards_$302_storage_ptr",
                       "typeString": "struct TopBlox.Cards storage pointer"
                     }
                   }
@@ -622,29 +622,29 @@
             ],
             "name": "Draws",
             "nodeType": "StructDefinition",
-            "scope": 277,
+            "scope": 322,
             "src": "332:190:3",
             "visibility": "public"
           }
         ],
-        "scope": 278,
+        "scope": 323,
         "src": "48:1455:3"
       }
     ],
     "src": "0:1504:3"
   },
   "legacyAST": {
-    "absolutePath": "/Users/neilalexanderdownie/Dropbox/webdev/TopBlox/contracts/TopBlox.sol",
+    "absolutePath": "/Volumes/STORAGE/Dropbox/webdev/TopBlox/contracts/TopBlox.sol",
     "exportedSymbols": {
       "TopBlox": [
-        277
+        322
       ]
     },
-    "id": 278,
+    "id": 323,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 231,
+        "id": 276,
         "literals": [
           "solidity",
           "^",
@@ -655,12 +655,12 @@
         "src": "0:23:3"
       },
       {
-        "absolutePath": "/Users/neilalexanderdownie/Dropbox/webdev/TopBlox/contracts/Owned.sol",
+        "absolutePath": "/Volumes/STORAGE/Dropbox/webdev/TopBlox/contracts/Owned.sol",
         "file": "./Owned.sol",
-        "id": 232,
+        "id": 277,
         "nodeType": "ImportDirective",
-        "scope": 278,
-        "sourceUnit": 230,
+        "scope": 323,
+        "sourceUnit": 275,
         "src": "25:21:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -671,45 +671,45 @@
             "arguments": [],
             "baseName": {
               "contractScope": null,
-              "id": 233,
+              "id": 278,
               "name": "Owned",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 229,
+              "referencedDeclaration": 274,
               "src": "68:5:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Owned_$229",
+                "typeIdentifier": "t_contract$_Owned_$274",
                 "typeString": "contract Owned"
               }
             },
-            "id": 234,
+            "id": 279,
             "nodeType": "InheritanceSpecifier",
             "src": "68:5:3"
           }
         ],
         "contractDependencies": [
-          229
+          274
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 277,
+        "id": 322,
         "linearizedBaseContracts": [
-          277,
-          229
+          322,
+          274
         ],
         "name": "TopBlox",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "TopBlox.User",
-            "id": 239,
+            "id": 284,
             "members": [
               {
                 "constant": false,
-                "id": 236,
+                "id": 281,
                 "name": "user",
                 "nodeType": "VariableDeclaration",
-                "scope": 239,
+                "scope": 284,
                 "src": "95:12:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -718,7 +718,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 235,
+                  "id": 280,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "95:7:3",
@@ -732,10 +732,10 @@
               },
               {
                 "constant": false,
-                "id": 238,
+                "id": 283,
                 "name": "wallet",
                 "nodeType": "VariableDeclaration",
-                "scope": 239,
+                "scope": 284,
                 "src": "113:14:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -744,7 +744,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 237,
+                  "id": 282,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "113:7:3",
@@ -759,20 +759,20 @@
             ],
             "name": "User",
             "nodeType": "StructDefinition",
-            "scope": 277,
+            "scope": 322,
             "src": "77:53:3",
             "visibility": "public"
           },
           {
             "canonicalName": "TopBlox.Packs",
-            "id": 244,
+            "id": 289,
             "members": [
               {
                 "constant": false,
-                "id": 241,
+                "id": 286,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 244,
+                "scope": 289,
                 "src": "151:11:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -781,7 +781,7 @@
                   "typeString": "string storage pointer"
                 },
                 "typeName": {
-                  "id": 240,
+                  "id": 285,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "151:6:3",
@@ -795,10 +795,10 @@
               },
               {
                 "constant": false,
-                "id": 243,
+                "id": 288,
                 "name": "pack",
                 "nodeType": "VariableDeclaration",
-                "scope": 244,
+                "scope": 289,
                 "src": "168:12:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -807,7 +807,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 242,
+                  "id": 287,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "168:7:3",
@@ -822,27 +822,27 @@
             ],
             "name": "Packs",
             "nodeType": "StructDefinition",
-            "scope": 277,
+            "scope": 322,
             "src": "132:51:3",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 248,
+            "id": 293,
             "name": "packs",
             "nodeType": "VariableDeclaration",
-            "scope": 277,
+            "scope": 322,
             "src": "204:35:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Packs_$244_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Packs_$289_storage_$",
               "typeString": "mapping(uint256 => struct TopBlox.Packs storage ref)"
             },
             "typeName": {
-              "id": 247,
+              "id": 292,
               "keyType": {
-                "id": 245,
+                "id": 290,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "212:4:3",
@@ -854,18 +854,18 @@
               "nodeType": "Mapping",
               "src": "204:22:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Packs_$244_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Packs_$289_storage_$",
                 "typeString": "mapping(uint256 => struct TopBlox.Packs storage ref)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 246,
+                "id": 291,
                 "name": "Packs",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 244,
+                "referencedDeclaration": 289,
                 "src": "220:5:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Packs_$244_storage_ptr",
+                  "typeIdentifier": "t_struct$_Packs_$289_storage_ptr",
                   "typeString": "struct TopBlox.Packs storage pointer"
                 }
               }
@@ -875,10 +875,10 @@
           },
           {
             "constant": false,
-            "id": 250,
+            "id": 295,
             "name": "packCounter",
             "nodeType": "VariableDeclaration",
-            "scope": 277,
+            "scope": 322,
             "src": "241:16:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -887,7 +887,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 249,
+              "id": 294,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "241:4:3",
@@ -901,14 +901,14 @@
           },
           {
             "canonicalName": "TopBlox.Cards",
-            "id": 257,
+            "id": 302,
             "members": [
               {
                 "constant": false,
-                "id": 252,
+                "id": 297,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 257,
+                "scope": 302,
                 "src": "279:11:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -917,7 +917,7 @@
                   "typeString": "string storage pointer"
                 },
                 "typeName": {
-                  "id": 251,
+                  "id": 296,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "279:6:3",
@@ -931,10 +931,10 @@
               },
               {
                 "constant": false,
-                "id": 254,
+                "id": 299,
                 "name": "details",
                 "nodeType": "VariableDeclaration",
-                "scope": 257,
+                "scope": 302,
                 "src": "296:14:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -943,7 +943,7 @@
                   "typeString": "string storage pointer"
                 },
                 "typeName": {
-                  "id": 253,
+                  "id": 298,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "296:6:3",
@@ -957,10 +957,10 @@
               },
               {
                 "constant": false,
-                "id": 256,
+                "id": 301,
                 "name": "pack",
                 "nodeType": "VariableDeclaration",
-                "scope": 257,
+                "scope": 302,
                 "src": "316:11:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -969,7 +969,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 255,
+                  "id": 300,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "316:4:3",
@@ -984,20 +984,20 @@
             ],
             "name": "Cards",
             "nodeType": "StructDefinition",
-            "scope": 277,
+            "scope": 322,
             "src": "260:70:3",
             "visibility": "public"
           },
           {
             "canonicalName": "TopBlox.Draws",
-            "id": 276,
+            "id": 321,
             "members": [
               {
                 "constant": false,
-                "id": 259,
+                "id": 304,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "351:7:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1006,7 +1006,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 258,
+                  "id": 303,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "351:4:3",
@@ -1020,10 +1020,10 @@
               },
               {
                 "constant": false,
-                "id": 261,
+                "id": 306,
                 "name": "user1",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "364:10:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1032,7 +1032,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 260,
+                  "id": 305,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "364:4:3",
@@ -1046,10 +1046,10 @@
               },
               {
                 "constant": false,
-                "id": 263,
+                "id": 308,
                 "name": "user1Stake",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "380:18:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1058,7 +1058,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 262,
+                  "id": 307,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "380:7:3",
@@ -1072,10 +1072,10 @@
               },
               {
                 "constant": false,
-                "id": 265,
+                "id": 310,
                 "name": "user2",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "404:10:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1084,7 +1084,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 264,
+                  "id": 309,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "404:4:3",
@@ -1098,10 +1098,10 @@
               },
               {
                 "constant": false,
-                "id": 267,
+                "id": 312,
                 "name": "user2Stake",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "420:18:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1110,7 +1110,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 266,
+                  "id": 311,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "420:7:3",
@@ -1124,10 +1124,10 @@
               },
               {
                 "constant": false,
-                "id": 269,
+                "id": 314,
                 "name": "packId",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "444:14:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1136,7 +1136,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 268,
+                  "id": 313,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "444:4:3",
@@ -1150,10 +1150,10 @@
               },
               {
                 "constant": false,
-                "id": 271,
+                "id": 316,
                 "name": "winningUserId",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "464:21:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1162,7 +1162,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 270,
+                  "id": 315,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "464:4:3",
@@ -1176,21 +1176,21 @@
               },
               {
                 "constant": false,
-                "id": 275,
+                "id": 320,
                 "name": "cards",
                 "nodeType": "VariableDeclaration",
-                "scope": 276,
+                "scope": 321,
                 "src": "491:28:3",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Cards_$257_storage_$",
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Cards_$302_storage_$",
                   "typeString": "mapping(uint256 => struct TopBlox.Cards storage ref)"
                 },
                 "typeName": {
-                  "id": 274,
+                  "id": 319,
                   "keyType": {
-                    "id": 272,
+                    "id": 317,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "499:4:3",
@@ -1202,18 +1202,18 @@
                   "nodeType": "Mapping",
                   "src": "491:22:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Cards_$257_storage_$",
+                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Cards_$302_storage_$",
                     "typeString": "mapping(uint256 => struct TopBlox.Cards storage ref)"
                   },
                   "valueType": {
                     "contractScope": null,
-                    "id": 273,
+                    "id": 318,
                     "name": "Cards",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 257,
+                    "referencedDeclaration": 302,
                     "src": "507:5:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Cards_$257_storage_ptr",
+                      "typeIdentifier": "t_struct$_Cards_$302_storage_ptr",
                       "typeString": "struct TopBlox.Cards storage pointer"
                     }
                   }
@@ -1224,12 +1224,12 @@
             ],
             "name": "Draws",
             "nodeType": "StructDefinition",
-            "scope": 277,
+            "scope": 322,
             "src": "332:190:3",
             "visibility": "public"
           }
         ],
-        "scope": 278,
+        "scope": 323,
         "src": "48:1455:3"
       }
     ],
@@ -1240,6 +1240,12 @@
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
   "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xfb88de099e13c3ed21f80a7a1e49f8caecf10df6",
+      "transactionHash": "0xd30eff31fd6ea323be099c0eaf282b2f09a7c19dfb925f822b07944535208a91"
+    },
     "1521125248742": {
       "events": {},
       "links": {},
@@ -1254,5 +1260,5 @@
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-15T17:40:05.493Z"
+  "updatedAt": "2018-03-15T20:20:55.154Z"
 }

@@ -27,7 +27,7 @@ struct Car {
         cars[_carID] = Car(_carID, _carAddress, _field, _answer);
         }
 
-    function listCards() view returns (uint[]) {
+    function listCars() public view returns (uint[]) {
         if (numCars == 0) {
         return new uint[](0);
         }
@@ -51,6 +51,22 @@ struct Car {
         }
         return (carCards);
     }
+
+    function getCar(uint _id) public view returns (uint256 _carId,address _carAddress,string  _field,string _answer ) {
+        // we check whether there is at least one car
+    require(numCars > 0);
+
+    // we check whether the article exists
+    require(_id > 0 && _id <= numCars);
+     
+    //retrieve the car details
+    Car storage car = cars[_id];
+
+    //string[4] arrCar = car(_id); 
+    return (1,car(_id).carAddress,"test","test");
+       // car(0),car(_id)(1),car(_id)(2),car(_id)(3));
+
+     }
 
     // kill the smart contract
     function kill() onlyOwner public {
