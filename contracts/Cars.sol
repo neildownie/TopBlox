@@ -6,7 +6,7 @@ contract Cars is Owned {
 
 struct Car {
     uint    id;
-    address carAddress;
+ //   address carAddress;
     string  field;
     string answer;
 }
@@ -15,18 +15,20 @@ struct Car {
 
     function setupCarList() onlyOwner public {
         uint newCarID;
-        newCarID = newCar(msg.sender,"title","Mini");
-        newCarID = newCar(msg.sender,"title","BMW");
-        newCarID = newCar(msg.sender,"title","Golf");
-        newCarID = newCar(msg.sender,"title","Rolls Royce");
+        newCarID = newCar("title","Mini");
+        newCarID = newCar("title","BMW");
+        newCarID = newCar("title","Golf");
+        newCarID = newCar("title","Rolls Royce");
     }
 
-    function newCar(address _carAddress, string _field, string _answer) public returns (uint _carID) {
+    function newCar(string _field, string _answer) public returns (uint _carID) {
         _carID = numCars++; // campaignID is return variable
         // Creates new struct and saves in storage. We leave out the mapping type.
-        cars[_carID] = Car(_carID, _carAddress, _field, _answer);
+        //_carAddress = address.new();
+        cars[_carID] = Car(_carID,  _field, _answer);
         }
 
+    //function listCars() public view returns (uint[]) {
     function listCars() public view returns (uint[]) {
         if (numCars == 0) {
         return new uint[](0);
@@ -52,7 +54,7 @@ struct Car {
         return (carCards);
     }
 
-    function getCar(uint _id) public view returns (uint256 _carId,address _carAddress,string  _field,string _answer ) {
+    function getCar(uint _id) public view returns (string  _field,string _answer ) {
         // we check whether there is at least one car
     require(numCars > 0);
 
@@ -63,7 +65,7 @@ struct Car {
     Car storage car = cars[_id];
 
     //string[4] arrCar = car(_id); 
-    return (1,car(_id).carAddress,"test","test");
+    return (car.field,car.answer);
        // car(0),car(_id)(1),car(_id)(2),car(_id)(3));
 
      }
